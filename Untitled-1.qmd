@@ -1,0 +1,236 @@
+---
+title: "Herramientas de IA y Gamificación en la Educación Universitaria"
+author: "Jorge Ivan Romero"
+format:
+  revealjs:
+    logo: logoutadeo_1.jpg
+    transition: slide
+    background-transition: fade
+    chalkboard: true
+    auto-animate: true
+    menu: false
+    theme: simple
+    css: custom.css
+    
+
+---
+
+# 1. Introducción a la IA
+
+::: {.fragment .zoom-in}
+- Exploremos primero cómo la IA y la gamificación están transformando la educación universitaria.
+:::
+
+---
+
+## Conceptos clave 
+::: {.fragment .fade-in}
+- <i class="fas fa-rocket icon mr-2 text-yellow-500"></i> Inteligencia artificial (IA)
+
+<div class="text-gray-800 ">
+Es la capacidad de una máquina para imitar la inteligencia humana en tareas como el aprendizaje, la resolución de problemas y la toma de decisiones.
+</div> 
+:::
+
+::: {.fragment .fade-in}
+- <i class="fas fa-desktop icon mr-2 "></i> Machine Learning
+
+<div class="text-gray-800 ">
+Es un campo de la inteligencia artificial que permite a las máquinas aprender de datos y mejorar su rendimiento en tareas específicas sin ser programadas explícitamente.
+</div> 
+:::
+::: {.fragment .fade-in}
+- <i class="fas fa-user icon mr-2 "></i> Redes neuronales
+
+<div class="text-gray-800">
+Son un modelo de machine learning inspirado en el funcionamiento del cerebro humano, compuesto por capas de neuronas artificiales interconectadas, que procesan información y aprenden a partir de datos para realizar tareas como reconocimiento de patrones, clasificación y predicción.
+</div>
+:::
+
+---
+
+## Historia breve de la IA
+::: {.fragment .slide-in}
+- **Años 50**: Inicio de la IA.
+:::
+::: {.fragment .slide-in}
+- **Machine Learning**: Revolución moderna.
+:::
+::: {.fragment .slide-in}
+- **Deep Learning**: Redes neuronales profundas y su impacto.
+:::
+
+---
+
+# Prompts y su Evolución
+::: {.fragment .zoom-in}
+- **Primero**: Comandos en interfaces de línea. <i class="fas fa-code icon mr-2 "></i>
+![alt](https://miro.medium.com/v2/resize:fit:720/format:webp/1*zGZSsGmCMrAF3PEkrvUgKg.gif)
+:::
+# Prompts y su Evolución
+::: {.fragment .zoom-in}
+- **Ahora**: Prompts complejos en modelos generativos.
+![alt](https://cdn.document360.io/3040c2b6-fead-4744-a3a9-d56d621c6c7e/Images/Documentation/MJ_NoParameter.gif)
+
+:::
+::: {.fragment .zoom-in}
+- **Ejemplo**: Evolución de prompts en **ChatGPT**, **MidJourney**.
+:::
+
+
+---
+
+## ¿Qué es un agente en IA?
+
+::: {.fragment .fade-in}
+<div class="text-gray-800 ">
+Un **agente en inteligencia artificial** es un sistema que percibe su entorno a través de sensores y actúa sobre él usando actuadores.
+Su objetivo es maximizar alguna medida de rendimiento mediante la interacción con el entorno.
+</div> 
+:::
+
+::: {.fragment .fade-in}
+Un **agente inteligente** toma decisiones basadas en sus percepciones y aprende de sus interacciones para mejorar su desempeño a lo largo del tiempo.
+
+
+<div style="text-align: center;">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTVrcjQ0cG1hOWZzYmN0azFmaDBzMnl6MXNsc2h5OTJuNHcxcXQ4NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nbpvCPsFLItHO/giphy.webp" width="300px" alt="Agente en IA" />
+</div>
+:::
+
+
+
+---
+
+
+# Agentes Inteligentes y Tipos de Entrenamiento
+
+- **Agentes Inteligentes**:
+  - Definición de agente inteligente.
+  - Interacción con el entorno.
+  
+- **Tipos de Entrenamiento**:
+  - Supervisado.
+  - No supervisado.
+  - Aprendizaje por refuerzo.
+
+---
+
+## ¿Qué es la gamificación?
+
+::: {.fragment .fade-in}
+<div class="text-gray-800 ">
+La **gamificación** se refiere al uso de elementos y mecánicas de juego en contextos no lúdicos, como la educación, para aumentar la motivación y el compromiso de los participantes.
+</div>
+:::
+
+::: {.fragment .fade-in}
+<div class="text-gray-800 ">
+En el ámbito educativo, la gamificación puede incluir el uso de **puntos**, **niveles**, **recompensas**, **tablas de clasificación** y **desafíos**  para mejorar la experiencia de aprendizaje y fomentar la participación activa de los estudiantes.
+</div>
+:::
+
+::: {.fragment .fade-in}
+<div class="text-gray-800 ">
+Además, se ha demostrado que la gamificación facilita la **retención del conocimiento** y promueve una mayor **colaboración** entre los estudiantes.
+</div>
+
+<div></div>
+<div class="text-gray-800 ">
+
+  <em>Fuente:</em> Werbach, K., & Hunter, D. (2012). *For the Win: How Game Thinking Can Revolutionize Your Business*.
+</div>
+:::
+---
+
+# Aplicaciones de IA en la Educación
+
+- **IA en tutores inteligentes**:
+  - Plataformas: **Khan Academy (GPT)**, **Answer.AI**, **Duolingo**. 
+---
+
+## Ejemplo de Gamificación en Educación
+
+::: {.fragment .fade-in}
+
+Un ejemplo de gamificación en la educación es el uso de plataformas como **Khanmigo**, que combina inteligencia artificial y elementos de gamificación para proporcionar tutorías personalizadas y mejorar la experiencia de aprendizaje.
+![alt](https://t.ctcdn.com.br/xDnrtXLznx-eGuJ5Xd-PNlmRZdU=/660x0/smart/i910297.gif)
+
+:::
+
+---
+
+## Ejemplo de Gamificación en Educación
+
+::: {.fragment .fade-in}
+
+Otra muy utilizada es Answer AI.
+![alt](https://s.cafebazaar.ir/images/upload/screenshot/com.cyberdavinci.gptkeyboard-53b108bc-8e46-4349-a00a-2e8b28aab619.jpeg?x-img=v1/format,type_webp,lossless_false/resize,h_600,lossless_false/optimize)
+
+:::
+
+---
+  
+- **Automatización de calificaciones**:
+  - **Grammarly** y sistemas de corrección automática.
+  
+- **Aprendizaje personalizado**:
+  - Plataformas como **Knewton**.
+
+
+
+---
+
+# Gamificación en la Educación
+
+- **Definición**: Uso de mecánicas de juego en el aprendizaje.
+- **Elementos clave**:
+  - Puntos, niveles, recompensas, tablas de clasificación.
+  
+- **Plataformas**:
+  - **Kahoot!**, **Classcraft**, **Quizlet**.
+
+
+
+---
+
+# Recompensas y Motivación
+
+- **Beneficios**:
+  - Incrementa la motivación.
+  - Mejora la retención de conceptos.
+
+
+
+---
+
+# Integración de IA y Gamificación: Aprendizaje por Refuerzo
+
+- **Concepto**: Relación entre **recompensas** y el **aprendizaje por refuerzo**.
+  
+- **Aplicación**:
+  - IA ajusta los desafíos según el progreso del estudiante.
+  
+
+---
+
+[Haz clic aquí para acceder al tutor de IA](https://aitutor-seven.vercel.app/)
+
+
+---
+
+
+# Conclusión
+
+- **Impacto**: La IA y la gamificación ofrecen oportunidades de personalización y motivación en la educación.
+- **Futuro**: IA seguirá impulsando la personalización del aprendizaje.
+
+
+
+---
+
+# Referencias
+
+1. Sutton, R.S., & Barto, A.G. (1998). *Reinforcement Learning: An Introduction*.
+2. Russell, S., & Norvig, P. (2010). *Artificial Intelligence: A Modern Approach*.
+3. Werbach, K., & Hunter, D. (2012). *For the Win: How Game Thinking Can Revolutionize Your Business*.
