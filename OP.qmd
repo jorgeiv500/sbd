@@ -1,0 +1,186 @@
+---
+title: "Optimización de Procesos con IA "
+author: "Eliasib Rivera"
+format:
+  revealjs:
+    logo: logoutadeo_1.jpg
+    transition: slide
+    background-transition: fade
+    chalkboard: true
+    auto-animate: true
+    menu: false
+    theme: simple
+    css: custom.css
+    
+---
+
+# 1. Introducción a la IA en la Optimización de Procesos
+
+::: {.fragment .zoom-in}
+- La inteligencia artificial (IA) juega un papel crucial en la optimización de procesos dentro de sectores clave como la producción, la logística, la distribución y las finanzas.
+:::
+
+---
+
+## Conceptos clave 
+
+::: {.fragment .fade-in}
+- <i class="fas fa-rocket icon mr-2 text-yellow-500"></i> Optimización con IA
+
+<div class="text-gray-800 ">
+Es el uso de algoritmos de IA para mejorar la eficiencia y el rendimiento de procesos complejos mediante la automatización y la toma de decisiones en tiempo real.
+</div> 
+:::
+
+::: {.fragment .fade-in}
+- <i class="fas fa-cogs icon mr-2 "></i> Machine Learning aplicado a la producción
+
+<div class="text-gray-800 ">
+Machine learning permite la predicción de fallos en maquinaria, la optimización de líneas de producción y el ajuste automático de parámetros de fabricación para mejorar la eficiencia.
+</div> 
+:::
+
+---
+
+# Ejemplos de IA en la Producción
+
+::: {.fragment .zoom-in}
+- **Mantenimiento predictivo**: Usando sensores IoT y machine learning para predecir cuándo fallará una máquina antes de que ocurra, minimizando el tiempo de inactividad.
+:::
+::: {.fragment .zoom-in}
+- **Optimización de líneas de producción**: Algoritmos de IA ajustan dinámicamente la configuración de máquinas para mejorar la eficiencia según la demanda.
+:::
+
+---
+
+# IA en la Logística y Distribución
+
+::: {.fragment .fade-in}
+<div class="text-gray-800 ">
+La IA permite optimizar las rutas de distribución, mejorar la gestión de inventarios y predecir la demanda de productos en tiempo real, reduciendo costos y tiempos de entrega.
+</div> 
+:::
+
+---
+
+### Ejemplos:
+- **Optimización de rutas**: Algoritmos de IA como el algoritmo de Dijkstra o redes neuronales optimizan rutas de entrega reduciendo distancias y tiempos.
+- **Gestión de inventarios**: Usando aprendizaje supervisado, las empresas pueden ajustar automáticamente los niveles de inventario en función de la demanda.
+  
+---
+
+# Ejemplos de IA en Finanzas
+
+::: {.fragment .fade-in}
+<div class="text-gray-800 ">
+En finanzas, la IA se utiliza para analizar grandes volúmenes de datos financieros y optimizar decisiones de inversión, gestión de riesgos y predicciones de mercado.
+</div>
+:::
+
+---
+
+### Ejemplos:
+- **Optimización de carteras de inversión**: Usando algoritmos genéticos y redes neuronales para equilibrar riesgo y rendimiento.
+- **Análisis de riesgos**: Machine learning para predecir riesgos crediticios basados en el historial financiero de los clientes.
+
+---
+
+# Agentes Inteligentes en Procesos de Producción y Logística
+
+- **Agentes inteligentes**:
+  - Sistemas que monitorizan y optimizan automáticamente la producción y el transporte.
+  - Usan aprendizaje por refuerzo para mejorar la toma de decisiones en tiempo real.
+
+---
+
+# Aplicación del Aprendizaje por Refuerzo
+
+::: {.fragment .zoom-in}
+- **Producción**: Sistemas que ajustan el flujo de trabajo para maximizar la producción y minimizar tiempos muertos.
+:::
+::: {.fragment .zoom-in}
+- **Logística**: Agentes inteligentes optimizan rutas y tiempos de entrega basados en datos en tiempo real.
+:::
+
+---
+
+
+## ¿Qué es el aprendizaje por refuerzo?
+
+El **aprendizaje por refuerzo** es una técnica de inteligencia artificial donde un **agente** (un programa que toma decisiones) aprende a tomar **decisiones** dentro de un **entorno** (en este caso, un modelo en FlexSim). El agente **experimenta** distintas acciones y recibe **recompensas** por las decisiones que lo llevan a buenos resultados. Con el tiempo, aprende a maximizar esas recompensas, optimizando el proceso.
+
+### Conceptos clave:
+1. **Agente**: Toma decisiones en el modelo.
+2. **Entorno**: El modelo en FlexSim donde se simulan procesos como producción o logística.
+3. **Recompensa**: Un valor que indica lo bien que lo está haciendo el agente en cada decisión.
+4. **Acciones**: Decisiones que toma el agente (como elegir qué ítem procesar primero).
+5. **Observaciones**: Información que el agente recibe sobre el estado del entorno (por ejemplo, el tipo de ítem que está procesando).
+
+---
+
+## Paso 1: Cómo funciona el modelo en FlexSim
+
+El modelo que estás viendo tiene los siguientes elementos básicos:
+
+**Source (Fuente)**: Aquí llegan los ítems (objetos) que se deben procesar.
+**Queue (Cola)**: Los ítems esperan en esta área antes de ser procesados.
+**Processor (Procesador)**: Es la máquina que procesa los ítems, con un tiempo de configuración variable dependiendo del tipo de ítem.
+**Sink (Destino)**: Una vez procesados, los ítems salen del modelo.
+
+![Modelo Flexsim](https://docs.flexsim.com/en/22.0/ModelLogic/ReinforcementLearning/Training/Images/ModelLayout.png)
+
+---
+
+## Paso 2: El papel del agente
+
+En este modelo, el **agente** debe aprender a **decidir** qué ítem procesar a continuación para maximizar la eficiencia del sistema. El agente recibe **observaciones** sobre el último ítem que procesó y debe elegir cuál procesar después, basándose en el tiempo que toma cambiar entre distintos tipos de ítems.
+
+Procesar un ítem del **Tipo 1** puede tardar menos tiempo que cambiar a un ítem del **Tipo 3**, pero si hay muchos ítems del Tipo 3 en la cola, el agente puede decidir que es más eficiente cambiar y procesarlos todos juntos.
+
+![Aprendizaje por refuerzo](https://docs.flexsim.com/en/22.0/ModelLogic/ReinforcementLearning/Training/Images/AddRLTool.png)
+
+---
+
+## Paso 3: Recompensas y optimización
+
+Cada vez que el agente toma una decisión, se le da una **recompensa** basada en cuán rápido logra procesar un ítem. Si elige bien y reduce el tiempo de cambio entre ítems, obtiene una recompensa mayor. Si elige mal, obtiene una recompensa menor.
+
+El objetivo del **aprendizaje por refuerzo** es que el agente aprenda a maximizar sus recompensas, lo que significa que optimiza las decisiones de procesamiento para que el sistema funcione de la manera más eficiente posible.
+
+![Recompensas](https://docs.flexsim.com/en/22.0/ModelLogic/ReinforcementLearning/Training/Images/LaunchingEnvironment.png)
+
+---
+
+## Paso 4: Visualización en FlexSim
+
+Cuando ejecutas el modelo, FlexSim simula el proceso en tiempo real. El agente está en el "fondo" tomando decisiones sobre qué ítem procesar. Conforme avanza la simulación, verás que el **Processor** cambia de ítems, y las decisiones del agente influirán en la velocidad con que estos son procesados.
+
+Puedes observar cómo el **Processor** optimiza su comportamiento, minimizando los tiempos de cambio y procesando más ítems en menos tiempo.
+
+![Asignacion de recompensas](https://docs.flexsim.com/en/22.0/ModelLogic/ReinforcementLearning/Training/Images/WaitingForInput.png)
+
+---
+
+## FINAL
+
+Este modelo de FlexSim utiliza aprendizaje por refuerzo para optimizar el proceso de producción. El agente aprende de sus experiencias y mejora sus decisiones con el tiempo, ayudando a que el sistema funcione de manera más eficiente sin reglas predefinidas. Esto es solo un ejemplo sencillo, pero el mismo enfoque puede aplicarse a procesos más complejos en producción, logística o distribución.
+
+
+---
+
+
+# Conclusión
+
+- **Impacto**: La IA está transformando procesos clave en la producción, logística, distribución y finanzas, mejorando la eficiencia y reduciendo costos.
+- **Futuro**: La integración de IA en más sectores permitirá una optimización aún más avanzada de procesos.
+
+---
+
+# Referencias
+
+1. Sutton, R.S., & Barto, A.G. (1998). *Reinforcement Learning: An Introduction*.
+2. Russell, S., & Norvig, P. (2010). *Artificial Intelligence: A Modern Approach*.
+3. Werbach, K., & Hunter, D. (2012). *For the Win: How Game Thinking Can Revolutionize Your Business*.
+
+---
+
