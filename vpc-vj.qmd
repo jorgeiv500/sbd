@@ -1,236 +1,124 @@
 ---
-title: "Herramientas de IA y Gamificación en la Educación Universitaria"
+title: "Visión por Computadora para Desarrollo de Videojuegos: Creando Experiencias Interactivas"
 author: "Jorge Ivan Romero"
-format:
+format: 
   revealjs:
-    logo: logoutadeo_1.jpg
     transition: slide
-    background-transition: fade
-    chalkboard: true
-    auto-animate: true
-    menu: false
+    logo: "logoutadeo_1.jpg"
     theme: simple
     css: custom.css
-    
-
 ---
 
-# 1. Introducción a la IA
+# 1. Introducción
 
 ::: {.fragment .zoom-in}
-- Exploremos primero cómo la IA y la gamificación están transformando la educación universitaria.
+- La **visión por computadora** es un campo de la IA que permite a las máquinas interpretar y comprender imágenes o videos.
+- Aplicada a los videojuegos, permite crear experiencias interactivas más inmersivas y dinámicas, detectando el movimiento del jugador o el entorno en tiempo real.
 :::
 
 ---
 
-## Conceptos clave 
-::: {.fragment .fade-in}
-- <i class="fas fa-rocket icon mr-2 text-yellow-500"></i> Inteligencia artificial (IA)
-
-<div class="text-gray-800 ">
-Es la capacidad de una máquina para imitar la inteligencia humana en tareas como el aprendizaje, la resolución de problemas y la toma de decisiones.
-</div> 
-:::
+# 2. ¿Cómo Funciona la Visión por Computadora en Videojuegos?
 
 ::: {.fragment .fade-in}
-- <i class="fas fa-desktop icon mr-2 "></i> Machine Learning
-
-<div class="text-gray-800 ">
-Es un campo de la inteligencia artificial que permite a las máquinas aprender de datos y mejorar su rendimiento en tareas específicas sin ser programadas explícitamente.
-</div> 
-:::
-::: {.fragment .fade-in}
-- <i class="fas fa-user icon mr-2 "></i> Redes neuronales
-
-<div class="text-gray-800">
-Son un modelo de machine learning inspirado en el funcionamiento del cerebro humano, compuesto por capas de neuronas artificiales interconectadas, que procesan información y aprenden a partir de datos para realizar tareas como reconocimiento de patrones, clasificación y predicción.
-</div>
+- **Captura de Imágenes/Videos**: Utiliza cámaras o sensores (como cámaras web o Kinect) para capturar imágenes o videos en tiempo real.
+- **Procesamiento de Imágenes**: Algoritmos de IA procesan las imágenes para detectar **movimientos**, **objetos** o **gestos** del jugador.
+- **Interacción en Tiempo Real**: El videojuego responde a las acciones detectadas, creando una experiencia interactiva única.
 :::
 
 ---
 
-## Historia breve de la IA
-::: {.fragment .slide-in}
-- **Años 50**: Inicio de la IA.
-:::
-::: {.fragment .slide-in}
-- **Machine Learning**: Revolución moderna.
-:::
-::: {.fragment .slide-in}
-- **Deep Learning**: Redes neuronales profundas y su impacto.
-:::
+# 3. Aplicaciones en Videojuegos
 
 ---
 
-# Prompts y su Evolución
-::: {.fragment .zoom-in}
-- **Primero**: Comandos en interfaces de línea. <i class="fas fa-code icon mr-2 "></i>
-![alt](https://miro.medium.com/v2/resize:fit:720/format:webp/1*zGZSsGmCMrAF3PEkrvUgKg.gif)
-:::
-# Prompts y su Evolución
-::: {.fragment .zoom-in}
-- **Ahora**: Prompts complejos en modelos generativos.
-![alt](https://cdn.document360.io/3040c2b6-fead-4744-a3a9-d56d621c6c7e/Images/Documentation/MJ_NoParameter.gif)
+1. **Detección de Movimiento**:
+- Juegos que detectan el movimiento del cuerpo o de las manos del jugador para controlar personajes o elementos en el juego.
+   
+![Detección de Movimiento](https://miro.medium.com/v2/resize:fit:720/format:webp/1*JLAnsw9NU6TFEVKKCARrCQ.gif)
 
-:::
-::: {.fragment .zoom-in}
-- **Ejemplo**: Evolución de prompts en **ChatGPT**, **MidJourney**.
-:::
+---
+   
+2. **Reconocimiento Facial**:
+- Juegos que adaptan la expresión facial del personaje a la del jugador.
+   
+![Reconocimiento Facial](https://mediapipe.dev/images/face_mesh_ar_effects.gif)
+
+---
+   
+3. **Reconocimiento de Gestos**:
+- El jugador controla el juego a través de gestos, como hacer señas con las manos.
+   
+![Reconocimiento de Gestos](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F32zpz7qa8hg5gl9lyvsc.gif)
+
+---
+
+## Demo en vivo:
+[Mediapipe studio](https://mediapipe-studio.webapps.google.com/studio/demo/hand_landmarker)
 
 
 ---
 
-## ¿Qué es un agente en IA?
+# 5. Ejemplo: Control de Personaje con Gestos
 
-::: {.fragment .fade-in}
-<div class="text-gray-800 ">
-Un **agente en inteligencia artificial** es un sistema que percibe su entorno a través de sensores y actúa sobre él usando actuadores.
-Su objetivo es maximizar alguna medida de rendimiento mediante la interacción con el entorno.
-</div> 
-:::
+## Paso 1: **Configuración del Juego**
+- Integra una cámara para capturar los gestos del jugador.
+
+## Paso 2: **Detección de Manos con MediaPipe**
+- El algoritmo detecta la posición de las manos del jugador.
+
+## Paso 3: **Mapeo de Gestos a Controles del Juego**
+- Se asocia cada gesto a una acción dentro del juego, como mover el personaje, saltar o atacar.
+
+
+---
+
+# 6. Beneficios de Usar Visión por Computadora en Videojuegos
 
 ::: {.fragment .fade-in}
-Un **agente inteligente** toma decisiones basadas en sus percepciones y aprende de sus interacciones para mejorar su desempeño a lo largo del tiempo.
-
-
-<div style="text-align: center;">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTVrcjQ0cG1hOWZzYmN0azFmaDBzMnl6MXNsc2h5OTJuNHcxcXQ4NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nbpvCPsFLItHO/giphy.webp" width="300px" alt="Agente en IA" />
-</div>
+- **Experiencias más inmersivas**: La interacción basada en movimientos y gestos hace que el jugador se sienta más involucrado.
+- **Accesibilidad**: Los jugadores pueden usar gestos y movimientos en lugar de controles tradicionales, haciendo los juegos más accesibles para diferentes audiencias.
+- **Interacción natural**: La visión por computadora permite que la interacción sea más fluida y natural, sin necesidad de dispositivos adicionales.
 :::
 
+---
+
+# 7. Retos de la Visión por Computadora en Videojuegos
+
+- **Precisión de Detección**: A veces, los movimientos pueden no detectarse correctamente, lo que afecta la jugabilidad.
+- **Requisitos de Hardware**: Algunos juegos requieren cámaras o sensores de alta calidad, lo que puede limitar el acceso de los jugadores.
+- **Latencia**: Para mantener una experiencia de juego fluida, es crucial minimizar la latencia entre la acción del jugador y la respuesta del juego.
+
+---
+
+# 8. Futuro de la Visión por Computadora en Videojuegos
+
+- **Realidad Aumentada (AR)**: Los juegos basados en AR están aprovechando la visión por computadora para superponer elementos digitales en el mundo real.
+- **Mejora en Sensores**: El avance de los sensores y cámaras permitirá una mejor precisión en la detección de gestos y movimientos.
+- **Integración con IA**: La inteligencia artificial mejorará la capacidad de los videojuegos para entender y reaccionar a las acciones del jugador de manera más inteligente.
+
 
 
 ---
 
-
-# Agentes Inteligentes y Tipos de Entrenamiento
-
-- **Agentes Inteligentes**:
-  - Definición de agente inteligente.
-  - Interacción con el entorno.
-  
-- **Tipos de Entrenamiento**:
-  - Supervisado.
-  - No supervisado.
-  - Aprendizaje por refuerzo.
-
----
-
-## ¿Qué es la gamificación?
+# 9. Conclusión
 
 ::: {.fragment .fade-in}
-<div class="text-gray-800 ">
-La **gamificación** se refiere al uso de elementos y mecánicas de juego en contextos no lúdicos, como la educación, para aumentar la motivación y el compromiso de los participantes.
-</div>
-:::
-
-::: {.fragment .fade-in}
-<div class="text-gray-800 ">
-En el ámbito educativo, la gamificación puede incluir el uso de **puntos**, **niveles**, **recompensas**, **tablas de clasificación** y **desafíos**  para mejorar la experiencia de aprendizaje y fomentar la participación activa de los estudiantes.
-</div>
-:::
-
-::: {.fragment .fade-in}
-<div class="text-gray-800 ">
-Además, se ha demostrado que la gamificación facilita la **retención del conocimiento** y promueve una mayor **colaboración** entre los estudiantes.
-</div>
-
-<div></div>
-<div class="text-gray-800 ">
-
-  <em>Fuente:</em> Werbach, K., & Hunter, D. (2012). *For the Win: How Game Thinking Can Revolutionize Your Business*.
-</div>
-:::
----
-
-# Aplicaciones de IA en la Educación
-
-- **IA en tutores inteligentes**:
-  - Plataformas: **Khan Academy (GPT)**, **Answer.AI**, **Duolingo**. 
----
-
-## Ejemplo de Gamificación en Educación
-
-::: {.fragment .fade-in}
-
-Un ejemplo de gamificación en la educación es el uso de plataformas como **Khanmigo**, que combina inteligencia artificial y elementos de gamificación para proporcionar tutorías personalizadas y mejorar la experiencia de aprendizaje.
-![alt](https://t.ctcdn.com.br/xDnrtXLznx-eGuJ5Xd-PNlmRZdU=/660x0/smart/i910297.gif)
-
+La **visión por computadora** está transformando la manera en que los jugadores interactúan con los videojuegos, permitiendo experiencias más inmersivas y accesibles. A medida que avanza la tecnología, veremos cada vez más innovaciones en la forma en que los jugadores controlan los juegos con gestos, movimientos y expresiones faciales.
 :::
 
 ---
 
-## Ejemplo de Gamificación en Educación
-
-::: {.fragment .fade-in}
-
-Otra muy utilizada es Answer AI.
-![alt](https://s.cafebazaar.ir/images/upload/screenshot/com.cyberdavinci.gptkeyboard-53b108bc-8e46-4349-a00a-2e8b28aab619.jpeg?x-img=v1/format,type_webp,lossless_false/resize,h_600,lossless_false/optimize)
-
-:::
-
----
-  
-- **Automatización de calificaciones**:
-  - **Grammarly** y sistemas de corrección automática.
-  
-- **Aprendizaje personalizado**:
-  - Plataformas como **Knewton**.
-
-
+## Demo en vivo:
+[Colab](https://colab.research.google.com/drive/11LoDn2xcgTWQ4JJmd_i80yoSzk0rKZDU?usp=sharing)
 
 ---
 
-# Gamificación en la Educación
+# 10. Referencias
 
-- **Definición**: Uso de mecánicas de juego en el aprendizaje.
-- **Elementos clave**:
-  - Puntos, niveles, recompensas, tablas de clasificación.
-  
-- **Plataformas**:
-  - **Kahoot!**, **Classcraft**, **Quizlet**.
-
-
+1. MediaPipe Documentation: *Real-Time Hand and Face Detection*.
+2. OpenCV Library: *Image Processing and Computer Vision*.
+3. Kinect for Windows SDK: *Real-Time Body Motion Detection*.
 
 ---
 
-# Recompensas y Motivación
-
-- **Beneficios**:
-  - Incrementa la motivación.
-  - Mejora la retención de conceptos.
-
-
-
----
-
-# Integración de IA y Gamificación: Aprendizaje por Refuerzo
-
-- **Concepto**: Relación entre **recompensas** y el **aprendizaje por refuerzo**.
-  
-- **Aplicación**:
-  - IA ajusta los desafíos según el progreso del estudiante.
-  
-
----
-
-[Haz clic aquí para acceder al tutor de IA](https://aitutor-seven.vercel.app/)
-
-
----
-
-
-# Conclusión
-
-- **Impacto**: La IA y la gamificación ofrecen oportunidades de personalización y motivación en la educación.
-- **Futuro**: IA seguirá impulsando la personalización del aprendizaje.
-
-
-
----
-
-# Referencias
-
-1. Sutton, R.S., & Barto, A.G. (1998). *Reinforcement Learning: An Introduction*.
-2. Russell, S., & Norvig, P. (2010). *Artificial Intelligence: A Modern Approach*.
-3. Werbach, K., & Hunter, D. (2012). *For the Win: How Game Thinking Can Revolutionize Your Business*.
