@@ -1,5 +1,5 @@
 ---
-title: "Herramientas de IA y Gamificación en la Educación Universitaria"
+title: "Seguridad Industrial Inteligente: Identificación de Equipos de Seguridad con Visión por Computadora"
 author: "Jorge Ivan Romero"
 format:
   revealjs:
@@ -11,226 +11,166 @@ format:
     menu: false
     theme: simple
     css: custom.css
+    embed_external_links: true
     
-
 ---
 
-# 1. Introducción a la IA
+# 1. Introducción a la Seguridad Industrial Inteligente
 
 ::: {.fragment .zoom-in}
-- Exploremos primero cómo la IA y la gamificación están transformando la educación universitaria.
+- El uso de **visión por computadora** está revolucionando la seguridad industrial al permitir la identificación automática de equipos de protección personal (EPP), como cascos de seguridad.
 :::
 
 ---
 
-## Conceptos clave 
+## Conceptos Clave
+
 ::: {.fragment .fade-in}
-- <i class="fas fa-rocket icon mr-2 text-yellow-500"></i> Inteligencia artificial (IA)
+- <i class="fas fa-eye icon mr-2 text-yellow-500"></i> **Visión por Computadora**
 
 <div class="text-gray-800 ">
-Es la capacidad de una máquina para imitar la inteligencia humana en tareas como el aprendizaje, la resolución de problemas y la toma de decisiones.
+Es un campo de la inteligencia artificial que permite a las máquinas interpretar y comprender imágenes o secuencias de video, emulando la visión humana.
 </div> 
 :::
 
 ::: {.fragment .fade-in}
-- <i class="fas fa-desktop icon mr-2 "></i> Machine Learning
+- <i class="fas fa-hard-hat icon mr-2 "></i> **Equipos de Protección Personal (EPP)**
 
 <div class="text-gray-800 ">
-Es un campo de la inteligencia artificial que permite a las máquinas aprender de datos y mejorar su rendimiento en tareas específicas sin ser programadas explícitamente.
-</div> 
-:::
-::: {.fragment .fade-in}
-- <i class="fas fa-user icon mr-2 "></i> Redes neuronales
-
-<div class="text-gray-800">
-Son un modelo de machine learning inspirado en el funcionamiento del cerebro humano, compuesto por capas de neuronas artificiales interconectadas, que procesan información y aprenden a partir de datos para realizar tareas como reconocimiento de patrones, clasificación y predicción.
-</div>
-:::
-
----
-
-## Historia breve de la IA
-::: {.fragment .slide-in}
-- **Años 50**: Inicio de la IA.
-:::
-::: {.fragment .slide-in}
-- **Machine Learning**: Revolución moderna.
-:::
-::: {.fragment .slide-in}
-- **Deep Learning**: Redes neuronales profundas y su impacto.
-:::
-
----
-
-# Prompts y su Evolución
-::: {.fragment .zoom-in}
-- **Primero**: Comandos en interfaces de línea. <i class="fas fa-code icon mr-2 "></i>
-![alt](https://miro.medium.com/v2/resize:fit:720/format:webp/1*zGZSsGmCMrAF3PEkrvUgKg.gif)
-:::
-# Prompts y su Evolución
-::: {.fragment .zoom-in}
-- **Ahora**: Prompts complejos en modelos generativos.
-![alt](https://cdn.document360.io/3040c2b6-fead-4744-a3a9-d56d621c6c7e/Images/Documentation/MJ_NoParameter.gif)
-
-:::
-::: {.fragment .zoom-in}
-- **Ejemplo**: Evolución de prompts en **ChatGPT**, **MidJourney**.
-:::
-
-
----
-
-## ¿Qué es un agente en IA?
-
-::: {.fragment .fade-in}
-<div class="text-gray-800 ">
-Un **agente en inteligencia artificial** es un sistema que percibe su entorno a través de sensores y actúa sobre él usando actuadores.
-Su objetivo es maximizar alguna medida de rendimiento mediante la interacción con el entorno.
+Son dispositivos o elementos diseñados para salvaguardar la seguridad de los trabajadores. El casco es uno de los equipos más comunes y críticos en entornos industriales.
 </div> 
 :::
 
-::: {.fragment .fade-in}
-Un **agente inteligente** toma decisiones basadas en sus percepciones y aprende de sus interacciones para mejorar su desempeño a lo largo del tiempo.
+---
 
+# 2. Detección de Manos, Rostros y Objetos con MediaPipe
 
-<div style="text-align: center;">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTVrcjQ0cG1hOWZzYmN0azFmaDBzMnl6MXNsc2h5OTJuNHcxcXQ4NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nbpvCPsFLItHO/giphy.webp" width="300px" alt="Agente en IA" />
-</div>
+::: {.fragment .zoom-in}
+**MediaPipe** es una biblioteca de código abierto que facilita la detección en tiempo real de **manos**, **rostros** y **objetos** a través de modelos de visión por computadora preentrenados.
 :::
 
+## ¿Qué puede hacer MediaPipe?
+
+- **Detección de Manos**: Identificación precisa de las posiciones de las manos y sus movimientos.
+- **Detección de Rostros**: Identificación y seguimiento de rostros en videos o imágenes.
+- **Detección de Objetos**: MediaPipe se puede entrenar para detectar objetos específicos, como cascos de seguridad.
+
+---
+
+## Deteccion y seguimiento
+
+![](https://user-images.githubusercontent.com/42124482/72891817-62d5ae80-3d15-11ea-9a18-717771f9c33d.gif)
+
+---
+
+## Deteccion y seguimiento
+
+![](https://hiukim.github.io/mind-ar-js-doc/assets/images/face-blendshapes-demo-d6876fb6bb204978ca591e2ba11978b3.gif)
+
+---
+
+### Demo en vivo:
+[Mediapipe studio](https://mediapipe-studio.webapps.google.com/studio/demo/hand_landmarker)
+---
+
+## 3. Aplicación en la Identificación de Casco de Seguridad
+
+El uso de **MediaPipe** para identificar si un trabajador lleva puesto un **casco de seguridad** se puede implementar de la siguiente manera:
+
+## Paso 1: Detección de rostro y cabeza
+
+1. **MediaPipe Face Detection** identifica el rostro del trabajador. Esto permite saber en qué área de la imagen se debe buscar el casco.
+   
 
 
 ---
 
+## Paso 2: Reconocimiento del casco
 
-# Agentes Inteligentes y Tipos de Entrenamiento
+2. **Detección de objetos**: MediaPipe puede entrenarse para reconocer el **casco** basado en su forma y color. El modelo buscará objetos sobre el área detectada como "cabeza" o "rostro" que correspondan a la forma de un casco.
 
-- **Agentes Inteligentes**:
-  - Definición de agente inteligente.
-  - Interacción con el entorno.
+
+
+---
+
+### Paso 3: Verificación del uso del equipo de seguridad
+
+3. Si MediaPipe detecta correctamente el casco, el sistema confirmará que el trabajador está cumpliendo con las normativas de seguridad. En caso de que no se detecte el casco, el sistema puede enviar una **alerta** o generar una advertencia.
+
+
+
+---
+
+# 4. Ventajas de la Seguridad Industrial Inteligente
+
+## 1. **Automatización de la supervisión**
+
+- En lugar de depender de la inspección manual para verificar si los empleados están utilizando los EPP correctamente, los sistemas basados en visión por computadora pueden realizar esta tarea de forma automática y en tiempo real.
+
+## 2. **Reducción de riesgos**
+
+- El sistema puede detectar si los trabajadores no están usando el equipo de seguridad necesario (como cascos) y emitir advertencias antes de que ocurra un accidente.
+
+---
+
+# 5. Implementación Técnica
+
+## Paso 1: Configuración de MediaPipe
+
+Para implementar esta solución, el primer paso es configurar **MediaPipe**. La biblioteca proporciona modelos preentrenados que pueden integrarse en Python o en aplicaciones móviles para detectar rostros y objetos.
+
+## Paso 2: Entrenamiento personalizado para detectar cascos
+
+Si bien MediaPipe no tiene un modelo preentrenado para cascos, se puede entrenar un **clasificador** específico para identificar cascos de seguridad. Este modelo será capaz de diferenciar entre un trabajador con o sin casco.
+
+## Paso 3: Integración con cámaras industriales
+
+Finalmente, se conecta el sistema con cámaras ubicadas estratégicamente en las instalaciones industriales. Las cámaras capturan el video en tiempo real, y el sistema de visión por computadora basado en MediaPipe detecta si los trabajadores están usando sus cascos.
+
+---
+
+## ¿Qué es Roboflow?
+
+- **Roboflow** es una plataforma que facilita la creación, gestión y entrenamiento de modelos de visión por computadora.
   
-- **Tipos de Entrenamiento**:
-  - Supervisado.
-  - No supervisado.
-  - Aprendizaje por refuerzo.
+- Proporciona herramientas para **anotar imágenes**, **preprocesar datos**, **entrenar modelos** y **desplegar modelos** entrenados, todo en una sola plataforma.
 
 ---
 
-## ¿Qué es la gamificación?
-
-::: {.fragment .fade-in}
-<div class="text-gray-800 ">
-La **gamificación** se refiere al uso de elementos y mecánicas de juego en contextos no lúdicos, como la educación, para aumentar la motivación y el compromiso de los participantes.
-</div>
-:::
-
-::: {.fragment .fade-in}
-<div class="text-gray-800 ">
-En el ámbito educativo, la gamificación puede incluir el uso de **puntos**, **niveles**, **recompensas**, **tablas de clasificación** y **desafíos**  para mejorar la experiencia de aprendizaje y fomentar la participación activa de los estudiantes.
-</div>
-:::
-
-::: {.fragment .fade-in}
-<div class="text-gray-800 ">
-Además, se ha demostrado que la gamificación facilita la **retención del conocimiento** y promueve una mayor **colaboración** entre los estudiantes.
-</div>
-
-<div></div>
-<div class="text-gray-800 ">
-
-  <em>Fuente:</em> Werbach, K., & Hunter, D. (2012). *For the Win: How Game Thinking Can Revolutionize Your Business*.
-</div>
-:::
----
-
-# Aplicaciones de IA en la Educación
-
-- **IA en tutores inteligentes**:
-  - Plataformas: **Khan Academy (GPT)**, **Answer.AI**, **Duolingo**. 
----
-
-## Ejemplo de Gamificación en Educación
-
-::: {.fragment .fade-in}
-
-Un ejemplo de gamificación en la educación es el uso de plataformas como **Khanmigo**, que combina inteligencia artificial y elementos de gamificación para proporcionar tutorías personalizadas y mejorar la experiencia de aprendizaje.
-![alt](https://t.ctcdn.com.br/xDnrtXLznx-eGuJ5Xd-PNlmRZdU=/660x0/smart/i910297.gif)
-
-:::
+### Ventajas de Usar Roboflow:
+1. **Anotación de Imágenes**: Puedes cargar imágenes y anotar manualmente los objetos que deseas que tu modelo reconozca (como cascos de seguridad).
+2. **Preprocesamiento**: Roboflow permite aplicar transformaciones a las imágenes (recorte, aumento de datos) para mejorar la calidad del entrenamiento.
+3. **Entrenamiento**: Puedes entrenar modelos utilizando diversas arquitecturas de redes neuronales, como YOLOv5 o EfficientDet.
+4. **Despliegue Fácil**: Una vez entrenado, puedes desplegar tu modelo directamente en aplicaciones web o móviles.
+5. **Integración con Modelos Preexistentes**: Roboflow puede integrarse con modelos preentrenados y datasets personalizados.
 
 ---
 
-## Ejemplo de Gamificación en Educación
-
-::: {.fragment .fade-in}
-
-Otra muy utilizada es Answer AI.
-![alt](https://s.cafebazaar.ir/images/upload/screenshot/com.cyberdavinci.gptkeyboard-53b108bc-8e46-4349-a00a-2e8b28aab619.jpeg?x-img=v1/format,type_webp,lossless_false/resize,h_600,lossless_false/optimize)
-
-:::
-
----
-  
-- **Automatización de calificaciones**:
-  - **Grammarly** y sistemas de corrección automática.
-  
-- **Aprendizaje personalizado**:
-  - Plataformas como **Knewton**.
-
-
+**Aplicación en la Seguridad Industrial**:  
+Roboflow facilita la creación de un modelo de visión por computadora que puede detectar **cascos de seguridad** en imágenes y videos. Al etiquetar imágenes de trabajadores con y sin casco, puedes entrenar un modelo para automatizar el monitoreo del uso de equipos de protección personal en tiempo real.
 
 ---
 
-# Gamificación en la Educación
+## Uso de modelos
 
-- **Definición**: Uso de mecánicas de juego en el aprendizaje.
-- **Elementos clave**:
-  - Puntos, niveles, recompensas, tablas de clasificación.
-  
-- **Plataformas**:
-  - **Kahoot!**, **Classcraft**, **Quizlet**.
-
-
-
+<iframe src="https://universe.roboflow.com/ai-camp-safety-equipment-detection/ppe-detection-using-cv/model/3?webcam=true" width="800px" height="600px" frameborder="0"></iframe>
 ---
 
-# Recompensas y Motivación
-
-- **Beneficios**:
-  - Incrementa la motivación.
-  - Mejora la retención de conceptos.
-
-
-
+### Demo en vivo:
+[Haz clic aquí para probar Roboflow](https://universe.roboflow.com/ai-camp-safety-equipment-detection/ppe-detection-using-cv/model/3?webcam=true)
 ---
 
-# Integración de IA y Gamificación: Aprendizaje por Refuerzo
+## 6. Conclusión
 
-- **Concepto**: Relación entre **recompensas** y el **aprendizaje por refuerzo**.
-  
-- **Aplicación**:
-  - IA ajusta los desafíos según el progreso del estudiante.
-  
-
----
-
-[Haz clic aquí para acceder al tutor de IA](https://aitutor-seven.vercel.app/)
-
-
----
-
-
-# Conclusión
-
-- **Impacto**: La IA y la gamificación ofrecen oportunidades de personalización y motivación en la educación.
-- **Futuro**: IA seguirá impulsando la personalización del aprendizaje.
-
+El uso de visión por computadora y herramientas como **MediaPipe** y **Roboflow** ofrece una solución eficiente y escalable para mejorar la seguridad industrial. Al automatizar la identificación de equipos de protección personal, como los cascos, se reduce el riesgo de accidentes y se asegura el cumplimiento de las normativas de seguridad de manera proactiva.
 
 
 ---
 
 # Referencias
 
-1. Sutton, R.S., & Barto, A.G. (1998). *Reinforcement Learning: An Introduction*.
+1. MediaPipe Documentation. (2024). *Real-time Hand, Face, and Object Detection*.  
 2. Russell, S., & Norvig, P. (2010). *Artificial Intelligence: A Modern Approach*.
-3. Werbach, K., & Hunter, D. (2012). *For the Win: How Game Thinking Can Revolutionize Your Business*.
+3. Seguridad Industrial: Normativas y Tecnologías Emergentes. (2023).
+
+---
